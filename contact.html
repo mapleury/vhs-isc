@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members of VHS ISC | Student Council Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleDropdown()">
+            <img src="assets/joinus.svg" alt="">
+            <img src="assets/dropdown.svg" alt="">
+
+            <div class="dropdown" id="dropdownMenu">
+                <div class="dropdown-content">
+                    <a href="main.html" class="dropdown-item">Home</a>
+                    <a href="archives.html" class="dropdown-item">Archives</a>
+                    <a href="members.html" class="dropdown-item">Members</a>
+                    <a href="" class="dropdown-item">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero"
+    style="background-image: url(assets/hero-bg.svg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <img src="assets/coming-soon.svg" class="img" alt="">
+
+    <div id="cursor-trail-container"></div>
+</div>
+    
+</body>
+<script src="js/main.js"></script>
+
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+</script>
+</html>

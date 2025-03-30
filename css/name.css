@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+input {
+    padding: 25px;
+    width: 300px;
+    font-size: 25px;
+    border-color: #FF83A6;
+    border-top-right-radius: 50px;
+    position: absolute;
+    top: 540px;
+    left: 975px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+.container {
+position: relative;
+top: -50px;
+opacity: 0; 
+animation: slideDown 1s ease-out forwards;
+
+
+#cursor-trail-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+}
+
+
+}
+
+@keyframes slideDown {
+from {
+top: -50px; 
+opacity: 0;
+}
+to {
+top: 0;
+opacity: 1;
+}
+}
+#username {
+opacity: 0; 
+animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+
+
+.trail-element {
+    position: absolute;
+    width: 300px; 
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.7s ease-out forwards;
+    }
+    
+    @keyframes fadeOut {
+    0% {
+    opacity: 1;
+    transform: scale(1);
+    }
+    100% {
+    opacity: 0;
+    transform: scale(0.7);
+    }
+    }

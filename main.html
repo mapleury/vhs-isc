@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VHS ISC | Student Council Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div class="overlay"></div>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleDropdown()">
+            <img src="assets/joinus.svg" alt="">
+            <img src="assets/dropdown.svg" alt="">
+
+            <div class="dropdown" id="dropdownMenu">
+                <div class="dropdown-content">
+                    <a href="main.html" class="dropdown-item">Home</a>
+                    <a href="archives.html" class="dropdown-item">Archives</a>
+                    <a href="members.html" class="dropdown-item">Members</a>
+                    <a href="" class="dropdown-item">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hero"
+        style="background-image: url(assets/hero-bg.svg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <img src="assets/title.svg" class="img" alt="">
+
+
+
+        <div id="cursor-trail-container"></div>
+    </div>
+
+
+    <div class="content">
+        <div class="card-container">
+            <div class="card">
+                <div class="img-container">
+                    <img src="assets/about.png" class="abt-img">
+                </div>
+                <div class="f">
+                    <h1 class="title about">About ISC.</h1>
+                    <p class="text">
+                        IDN Student Council (ISC) is a student-led organization dedicated to fostering leadership,
+                        unity, and innovation within the IDN community. ISC serves as the voice of students, organizing
+                        impactful events, advocating for student needs.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="scrolling-text-container">
+        <img class="scrolling-text" src="assets/isc.svg" alt="IDN Student Council">
+    </div>
+
+
+    <div class="content">
+        <div class="card-cons">
+            <div class="cards">
+                <div class="division-container background-video">
+                    <video autoplay muted loop class="background-video">
+                        <source src="assets/divison-bg-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <h1 class="title passion">Passion drives discipline.</h1>
+
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quasi vel, ex
+                    eius dolores maiores fugiat rerum porro officia odit ut fugit, aliquid iusto velit, nobis tempora
+                    magni praesentium quam quos. Ad molestiae deserunt sapiente harum excepturi corporis animi rem ipsum
+                    deleniti, sunt a debitis repellendus voluptates exercitationem tenetur ab dicta temporibus
+                    dignissimos quo? Iure quos fugiat aliquam numquam dolorem!</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="visimisi">
+        <img src="assets/visi-misi.svg" alt="">
+    </div>
+    </div>
+
+    <div style="padding-left: 400px; position: relative; margin-top: -880px;">
+        <img src="assets/divider.svg" alt="">
+    </div>
+
+    <div class="container"
+        style="background-image: url(assets/members.svg); background-repeat: no-repeat; background-position: center; background-size: 1300px;    margin-top: 900px;">
+        <a class="link-members" href="members.html">Check our our Members!</a>
+    </div>
+
+    <div class="container"
+        style="background-image: url(assets/newsletter.svg); background-repeat: no-repeat; background-position: center; background-size: 1300px;    margin-top: 80px;">
+        <a class="link-news" href="contact.html">
+            <img src="assets/button.svg" alt="">
+        </a>
+        <div class="boxes" style="justify-content: center; align-items: center; columns: 3; gap: 200px; margin-top: -400px;">
+            <div class="box" style="margin-right: 50px; padding-right: 94px;">
+                <h1 style="color: white; font-size: 34px;">* Nama</h1>
+                <p style="color: white;">/ Tanggal</p>
+            </div>
+            <div class="box" style="margin-left: -37px; padding-right: 94px;">
+                <h1 style="color: white; font-size: 34px;">* Nama</h1>
+                <p style="color: white;">/ Tanggal</p>
+            </div>
+            <div class="box" style="margin-left: -57px; padding-right: 94px;" >
+                <h1 style="color: white; font-size: 34px;">* Nama</h1>
+                <p style="color: white;">/ Tanggal</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container"
+        style="background-image: url(assets/footer.svg); background-repeat: no-repeat; background-position: center; background-size: cover;  height: 90vh;  margin-top: 130px;">
+       <div style="display: flex; gap: 10px; margin-top: 300px;">
+
+        <a class="socials" href="members.html">Youtube,  </a>
+        <a class="socials" href="members.html">Instagram,  </a>
+        <a class="socials" href="members.html">Linkedin.</a>
+
+       </div>
+    </div>
+</body>
+
+
+
+
+
+<script>
+    function interpolateColor(color1, color2, factor) {
+        let result = color1.slice();
+        for (let i = 0; i < 3; i++) {
+            result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
+        }
+        return 'rgb(' + result.join(',') + ')';
+    }
+
+    function hexToRgb(hex) {
+        let bigint = parseInt(hex.slice(1), 16);
+        return [bigint >> 16 & 255, bigint >> 8 & 255, bigint & 255];
+    }
+
+    const initialBgColor = hexToRgb('#353781');
+    const targetBgColor = hexToRgb('#ffffff');
+
+    window.addEventListener("scroll", function () {
+        let scrollY = window.scrollY;
+        let heroHeight = document.querySelector(".hero").offsetHeight;
+        let contentHeight = document.querySelector(".content").offsetHeight;
+        let card = document.querySelector(".card");
+        let cards = document.querySelector(".cards");
+        let text = document.querySelector(".scrolling-text");
+
+        let scrollProgress = Math.min(scrollY / (contentHeight - window.innerHeight), 1);
+        document.body.style.backgroundColor = interpolateColor(initialBgColor, targetBgColor, scrollProgress);
+
+        let newWidth = 40 + 50 * scrollProgress;
+        let newHeight = 50 + 30 * scrollProgress;
+
+        card.style.width = newWidth + "%";
+        card.style.height = newHeight + "vh";
+
+        cards.style.width = newWidth + "%";
+        cards.style.height = newHeight + "vh";
+
+        let maxTranslate = -((text.offsetWidth - window.innerWidth) / 1.5);
+        let moveLeft = Math.max(maxTranslate, -scrollY * 1.2);
+
+        text.style.transform = `translateX(${moveLeft}px)`;
+    });
+</script>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+
+       
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+</script>
+<script src="js/main.js"></script>
+<script src="js/scroll.js"></script>
+
+</html>
